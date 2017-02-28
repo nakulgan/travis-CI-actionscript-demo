@@ -1,6 +1,6 @@
 # Travis-CI ActionScript Demo
 
-[![Build Status](https://api.travis-ci.org/Larusso/travis-CI-actionscript-demo.svg?branch=flexmojos4.0)](https://travis-ci.org/Larusso/travis-CI-actionscript-demo)
+[![Build Status](https://travis-ci.org/nakulgan/travis-CI-actionscript-demo.svg?branch=flexmojos4.0)](https://travis-ci.org/nakulgan/travis-CI-actionscript-demo)
 
 A simple demo that demonstrates a way to unit test [ActionScript](http://en.wikipedia.org/wiki/ActionScript) applications with [Travis CI](http://travis-ci.org)
 
@@ -10,7 +10,7 @@ The demo utilizes OSX Travis worker.  A specified [Flash Player](http://www.adob
 ## Example Details
 
 ### Flex-Mojos 4.0
-
+  * needs Maven 3.2 or 3.5
   * needed to compile FlexSDK 4.5
   * used FlexUnit 4.0
   * needs a Flash Player work around
