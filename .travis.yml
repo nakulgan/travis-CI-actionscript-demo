@@ -1,5 +1,14 @@
 language: objective-c
 
+before_install:
+  # setup mvn 3.2.5
+  - wget https://archive.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz
+  - tar zxvf apache-maven-3.2.5-bin.tar.gz
+  - chmod +x apache-maven-3.2.5/bin/mvn
+  - export M2_HOME=$PWD/apache-maven-3.2.5
+  - export PATH=$PWD/apache-maven-3.2.5/bin:${PATH}
+  - hash -r
+
 before_script:
   # set the JAVA_HOME which is not set by default for OSX Travis-CI workers
   - export "JAVA_HOME=`/usr/libexec/java_home`"
@@ -10,5 +19,9 @@ before_script:
   - export PATH="Flash Player Debugger.app/Contents/MacOS":$PATH
   # FLex-Mojo is expecting the "Flash Player" command so copy "Flash Player Debug" to "Flash Player"
   - cp Flash\ Player\ Debugger.app/Contents/MacOS/Flash\ Player\ Debugger Flash\ Player\ Debugger.app/Contents/MacOS/Flash\ Player
+  # maven
+  - export M2_HOME=$PWD/apache-maven-3.2.5
+  - export PATH=$PWD/apache-maven-3.2.5/bin:${PATH}
+  - hash -r
 
 script: mvn test
